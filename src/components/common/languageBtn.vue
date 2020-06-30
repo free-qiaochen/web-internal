@@ -5,6 +5,11 @@
             class="btn btn-success"
             @click="changeLocale">中文/EN</button> -->
     <el-Button @click="changeLocale">中文/EN</el-Button>
+    <div>
+      <p>pc和mobile</p> 
+      <div v-if="this.$deviceType==='pc'">pc组件</div>
+      <div v-if="this.$deviceType==='mobile'">mobile组件</div>
+    </div>
   </div>
 </template>
 
