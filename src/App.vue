@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
+  <div id="app" :class="$deviceType">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Language />
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <h1 style="font-size: 16px; text-align: center;">{{ $t("message.hello") }}</h1>
+    <div>{{$t("home.title")}}</div>
+    <h2>{{$t("about.title")}}</h2>
+    <el-DatePicker></el-DatePicker>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Language from './components/common/languageBtn'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    Language
   }
 }
 </script>
